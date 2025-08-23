@@ -15,7 +15,8 @@ build/
 .env.development.local
 .env.test.local
 .env.production.local
-.context_files/
+Priv_doc
+
 # IDE and editor files
 .vscode/
 .idea/

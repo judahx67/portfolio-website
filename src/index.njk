@@ -1,0 +1,46 @@
+---
+layout: base.njk
+title: "Thai Huy — Cybersecurity"
+description: "Cybersecurity student."
+---
+
+<div class="container">
+  <header class="main-header">
+    <h1>TRẦN THÁI HUY</h1>
+    <a class="email" href="mailto:thaihuy.tranit@gmail.com">thaihuy.tranit@gmail.com</a>
+    <nav class="social-links">
+      <<<<<<<<<< <a href="https://github.com/judahx67">GitHub</a> ✶
+      <a href="https://linkedin.com/in/yourusername">LinkedIn</a> >>>>>>>>>>
+      
+    </nav>
+    
+  </header>
+
+  <main class="content">
+    <p class="motto">Cybersecurity student. Keeping systems safe and compliant</p>
+
+    <h2>Skills</h2>
+    <p>C++ • C • C# • Python • Go • Windows • Linux &#40; Arch, Ubuntu, Kali, Fedora&#41; </p>
+    
+    <p>Burp Suite • ZAP • IDA • YARA • Elastic EDR • OpenVPN • VMWare • MITRE ATT&CK Framework</p>
+    
+    <h2>Projects</h2>
+    <ul class="project-list" id="project-list">
+    {% set projectCount = 0 %}
+    {% for project in collections.projects %}
+      {% set projectCount = projectCount + 1 %}
+      <li class="project-item{% if projectCount > 3 %} hidden{% endif %}">
+        <a href="{{ project.url }}">{{ project.data.title }}</a>{% if project.data.description %}: {{ project.data.description }}{% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+    {% if collections.projects.length > 3 %}
+    <div class="show-more-container">
+      <button class="show-more-btn" onclick="toggleProjects()">+</button>
+    </div>
+    {% endif %} 
+    
+    <h2>Certifications</h2>
+    <p class="certifications">CompTIA Security+ • CEH (In Progress) • OSCP (Planned)</p>
+  </main>
+</div>

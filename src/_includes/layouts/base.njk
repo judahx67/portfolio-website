@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title or "Portfolio — Cybersecurity" }}</title>
+  <meta name="description" content="{{ description or 'Cybersecurity student portfolio placeholder' }}">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/assets/css/styles.css" as="style">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none';">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tran Thai Huy">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title or 'Cybersecurity Portfolio' }}">
+  <meta property="og:description" content="{{ description or 'Cybersecurity student portfolio' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com{{ page.url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="alternate icon" href="/assets/favicon/favicon.ico">
+</head>
+<body>
+  <main>
+    {{ content | safe }}
+  </main>
+  
+  <footer>
+    <p>2025 | Built with <a href="https://www.11ty.dev/">Eleventy</a> | Inspired by Sylvan Franklin.
+    <br>
+    <a href="/security.txt">Security Policy</a></p>
+  </footer>
+  
+  <script>
+    function toggleProjects() {
+      const projectItems = document.querySelectorAll('.project-item');
+      const showMoreBtn = document.querySelector('.show-more-btn');
+      
+      // Check if we're currently showing only 3 projects
+      const hasHiddenItems = Array.from(projectItems).some(item => 
+        item.classList.contains('hidden')
+      );
+      
+      if (hasHiddenItems) {
+        // Show all projects
+        projectItems.forEach(item => {
+          item.classList.remove('hidden');
+        });
+        showMoreBtn.textContent = '−';
+      } else {
+        // Hide projects after the first 3
+        projectItems.forEach((item, index) => {
+          if (index >= 3) {
+            item.classList.add('hidden');
+          }
+        });
+        showMoreBtn.textContent = '+';
+      }
+    }
+  </script>
+</body>
+</html>
