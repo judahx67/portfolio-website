@@ -4,7 +4,7 @@
   "description": "A performant, elegant, lightweight cybersecurity portfolio website",
   "main": "index.js",
   "scripts": {
-    "build": "set NODE_ENV=production && eleventy --pathprefix 'portfolio-website'",
+    "build": "set NODE_ENV=production&& eleventy",
     "serve": "eleventy --serve",
     "start": "eleventy --serve",
     "debug": "DEBUG=Eleventy* eleventy"
@@ -23,8 +23,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "dependencies": {
-    "eleventy": "^1.0.7"
   }
 }

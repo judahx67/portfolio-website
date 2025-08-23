@@ -7,10 +7,10 @@
   <meta name="description" content="{{ description or 'Cybersecurity student portfolio placeholder' }}">
   
   <!-- Preload critical resources -->
-  <link rel="preload" href="/assets/css/styles.css" as="style">
+  <link rel="preload" href="{{ '/assets/css/styles.css' | url }}" as="style">
   
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
   
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none';">
@@ -30,8 +30,8 @@
   <meta property="og:url" content="https://yourdomain.com{{ page.url }}">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
-  <link rel="alternate icon" href="/assets/favicon/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon/favicon.svg' | url }}">
+  <link rel="alternate icon" href="{{ '/assets/favicon/favicon.ico' | url }}">
 </head>
 <body>
   <main>
@@ -41,7 +41,7 @@
   <footer>
     <p>2025 | Built with <a href="https://www.11ty.dev/">Eleventy</a> | Inspired by Sylvan Franklin.
     <br>
-    <a href="/security.txt">Security Policy</a></p>
+    <a href="{{ '/security.txt' | url }}">Security Policy</a></p>
   </footer>
   
   <script>
