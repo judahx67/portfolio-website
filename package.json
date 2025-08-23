@@ -1,0 +1,27 @@
+{
+  "name": "cybersecurity-portfolio",
+  "version": "1.0.0",
+  "description": "A performant, elegant, lightweight cybersecurity portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "keywords": [
+    "cybersecurity",
+    "portfolio",
+    "eleventy",
+    "static-site",
+    "security"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
