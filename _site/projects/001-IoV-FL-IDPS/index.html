@@ -39,21 +39,21 @@
 <div class="container">
   <article class="project-detail">
   
-    <h2>Intrusion Detection System for In-Vehicle Network Security Using Federated Learning.</h2>
+    <h1>Intrusion Detection System for In-Vehicle Network Security Using Federated Learning.</h1>
 <p><em>Project conducted by <strong>Trần Thái Huy</strong> and <strong>Phan Quốc Đạt</strong> under the supervision of <strong>Dr.Nguyễn Tấn Cầm and MSc.Nghi Hoàng Khoa.</strong></em></p>
-<h1>Overview</h1>
+<h2>Overview</h2>
 <p>This project focuses on enhancing in-vehicle network security by developing an <strong>Intrusion Detection System (IDS)</strong> using <strong>Federated Learning (FL)</strong>. Derived from the original model “<strong>FedMSE</strong>: Semi-supervised federated learning approach for IoT network intrusion detection” (Nguyen Van Tuan &amp; Razvan Beuran, 2025). We adapted the model for a <strong>decentralized and peer-to-peer</strong> scenario to remove the single point of failure in traditional FL systems. <strong><a href="/assets/images/projects/001/FedMSE-Decentralized.pdf">Full Project Report (PDF)</a></strong></p>
-<h1>Approach</h1>
+<h2>Approach</h2>
 <p>Instead of relying on a central server, gateways in our system collaboratively selected aggregators each round, validated models using MSE-based scoring, and ensured robustness against malicious updates. We evaluated the system on both <strong>N-BaIoT</strong> and <strong>Kitsune</strong> datasets under IID and non-IID scenarios.
 <img src="/assets/images/projects/001/federated-learning-flow.png" alt="Federated Learning Process Flow"></p>
-<h1>Results</h1>
+<h2>Results</h2>
 <ol>
 <li>SAE-CEN consistently outperformed Autoencoder, achieving mean AUC up to 93.77% (IID) and 93.53% (non-IID).</li>
 <li>MSEAvg proved most effective in distinguishing normal vs. abnormal traffic in decentralized settings.</li>
 <li>The peer-to-peer design improved resilience while maintaining competitive accuracy, showing strong potential for real-world IoV intrusion detection.</li>
 </ol>
 <p><img src="/assets/images/projects/001/performance-results.png" alt="Performance Comparison Chart"></p>
-<h1>Credits:</h1>
+<h3>Credits:</h3>
 <p>Van Tuan Nguyen and Razvan Beuran (2025), “FedMSE: Semi-supervised federated learning approach for IoT network intrusion detection”, Computers Security, 151, p. 104337, issn: 0167-4048, doi: <a href="https://doi.org/10.1016/j.cose.2025.104337https:/">https://doi.org/10.1016/j.cose.2025.104337</a>, url: <a href="https://www.sciencedirect.com/science/article/pii/S0167404825000264">https://www.sciencedirect.com/science/article/pii/S0167404825000264</a>.</p>
 
   </article>

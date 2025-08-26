@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>CRYSTALS-Dilithium Encryption Algorithm for E-commerce Website</title>
-  <meta name="description" content="Implementing Open Quantum Safe Library&#39;s CRYSTALS-Dilithium Level 3 for an E-commerce website.">
+  <meta name="description" content="Implementing Open Quantum Safe Library&#39;s CRYSTALS-Dilithium Level 3 for an E-commerce website">
   
   <!-- Preload critical resources -->
   <link rel="preload" href="/assets/css/styles.css" as="style">
@@ -25,7 +25,7 @@
   
   <!-- Open Graph -->
   <meta property="og:title" content="CRYSTALS-Dilithium Encryption Algorithm for E-commerce Website">
-  <meta property="og:description" content="Implementing Open Quantum Safe Library&#39;s CRYSTALS-Dilithium Level 3 for an E-commerce website.">
+  <meta property="og:description" content="Implementing Open Quantum Safe Library&#39;s CRYSTALS-Dilithium Level 3 for an E-commerce website">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yourdomain.com/projects/002-CRYSTAL-DIL/">
   
@@ -39,9 +39,22 @@
 <div class="container">
   <article class="project-detail">
   
-    <h2>Overview</h2>
+    <h1>Implementing CRYSTALS-Dilithium in secure e-commerce transactions.</h1>
+<p><em>Project conducted by <strong>Mai Xuân Huy, Nguyễn Đình Quang, Trần Thái Huy</strong> under the supervision of <strong>Dr. NGUYỄN NGỌC TỰ</strong></em></p>
+<h2>Overview</h2>
+<p>This project demonstrates the integration of the <strong>CRYSTALS-Dilithium Level 3</strong> digital signature scheme, provided by the <strong>Open Quantum Safe (OQS) library</strong>, into a modern e-commerce website.</p>
+<p>The aim is to future-proof online transactions against quantum attacks by replacing traditional cryptographic signatures (RSA/ECDSA) with post-quantum alternatives.</p>
 <h2>Approach</h2>
+<p>As the website is built with Python using the Flask framework, the OQS is not natively compatible and cannot be called directly. Our plan was to compiled a DLL (Dynamic Link Library) from C++ and use it in the website backend.</p>
+<p><img src="/assets/images/projects/002/encryption_flow.png" alt="Dilithium Integration Diagram">
+<img src="/assets/images/projects/002/website_flow.png" alt="Website Procedures"></p>
 <h2>Results</h2>
+<ol>
+<li>Successfully replaced RSA/ECDSA signatures with Dilithium Level 3 for authentication and order verification.</li>
+<li>Demonstrated a practical path for post-quantum security in web applications.</li>
+</ol>
+<h3>Credits:</h3>
+<p><a href="https://openquantumsafe.org/">Open Quantum Safe Project.</a></p>
 
   </article>
 </div>

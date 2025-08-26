@@ -39,9 +39,31 @@
 <div class="container">
   <article class="project-detail">
   
-    <h2>Overview</h2>
-<h2>Approach</h2>
-<h2>Results</h2>
+    <h1>zask: A Cross-platform Media Conversion Tool in C++</h1>
+<h4><a href="https://github.com/judahx67/zask">GitHub</a></h4>
+<h2>Overview</h2>
+<p>Zask is a cross-platform media converter tool built with the WxWidgets GUI library and powered by FFmpeg.</p>
+<h2>Functionality</h2>
+<ul>
+<li>Input/output file pickers, with output defaulting to “-converted” in the same folder</li>
+<li>Trimming support using <code>-ss</code> (start) and <code>-to</code> (end); accurate trim mode uses <code>-t</code> duration</li>
+<li>Video codecs: Copy, H.264 (<code>libx264</code>), HEVC (<code>libx265</code>), VP9 (<code>libvpx-vp9</code>, slow), AV1 (<code>libaom-av1</code>)</li>
+<li>Video speed presets, optional video bitrate, and threads selector</li>
+<li>Audio-only mode: MP3, WAV (PCM), FLAC (levels), Ogg Vorbis (q1–q6), Opus</li>
+<li>Live FFmpeg output in a log box; Stop button to terminate; optional debug command view</li>
+</ul>
+<p><strong>Application UI:</strong></p>
+<p><img src="/assets/images/projects/003/App_UI.png" alt="App UI"></p>
+<h2>Dependencies</h2>
+<ul>
+<li>wxWidgets 3.2+ (UI framework)</li>
+<li>FFmpeg (media processing)</li>
+<li>CMake 3.16+ and a C++17 compiler</li>
+<li>vcpkg (for managing dependencies)</li>
+</ul>
+<h2>Credits:</h2>
+<p><a href="https://wxwidgets.org/">WxWidgets</a></p>
+<p><a href="https://ffmpeg.org/">FFmpeg</a></p>
 
   </article>
 </div>
