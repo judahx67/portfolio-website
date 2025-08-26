@@ -362,6 +362,7 @@ img {
   .social-links {
     font-size: 0.9rem;
     margin-bottom: var(--space-lg);
+    overflow-wrap: anywhere;
   }
   
   .content h2 {
