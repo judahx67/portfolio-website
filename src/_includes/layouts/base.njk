@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ title or "Portfolio — Cybersecurity" }}</title>
-  <meta name="description" content="{{ description or 'Cybersecurity student portfolio placeholder' }}">
+  <meta name="description" content="{{ description or 'Cybersecurity student portfolio website' }}">
   
   <!-- Preload critical resources -->
   <link rel="preload" href="{{ '/assets/css/styles.css' | url }}" as="style">
@@ -22,6 +22,9 @@
   <!-- SEO -->
   <meta name="robots" content="index, follow">
   <meta name="author" content="Tran Thai Huy">
+  <title>{{ title | default("Thai Huy — Cybersecurity Portfolio") }}</title>
+  <meta name="description" content="{{ description | default('Showcasing cybersecurity projects, research, and skills in modern information security.') }}">
+  <link rel="canonical" href="https://thaihuy.netlify.app{{ page.url }}">
   
   <!-- Open Graph -->
   <meta property="og:title" content="{{ title or 'Cybersecurity Portfolio' }}">
