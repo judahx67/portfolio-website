@@ -34,6 +34,9 @@
   <link rel="alternate icon" href="{{ '/assets/favicon/favicon.ico' | url }}">
 </head>
 <body>
+  {% if page.url != '/' %}
+  <a class="home-btn" href="{{ '/' | url }}" aria-label="Home">← Home</a>
+  {% endif %}
   <main>
     {{ content | safe }}
   </main>
@@ -41,7 +44,7 @@
   <footer>
     <p>2025 | Built with <a href="https://www.11ty.dev/">Eleventy</a> | Inspired by Sylvan Franklin.
     <br>
-    <a href="{{ '/security.txt' | url }}">Security Policy</a></p>
+    <a href="{{ '/security/' | url }}">Security Policy</a></p>
   </footer>
   
   <script>

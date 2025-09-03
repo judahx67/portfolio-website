@@ -3,6 +3,9 @@
   /* Typography */
   --font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --font-size-base: 16px;
+  /* Global zoom factor: change this to 1, 1.125, 1.25, etc. to scale the whole site.
+    Example: 1.125 -> ~12.5% larger, 1.25 -> 25% larger */
+  --global-zoom: 1.125;
   --line-height-base: 1.1;
   
   /* Colors */
@@ -40,7 +43,8 @@
 }
 
 html {
-  font-size: var(--font-size-base);
+  /* multiply the base font-size by the global zoom factor so most rem-based sizing scales */
+  font-size: calc(var(--font-size-base) * var(--global-zoom));
   line-height: var(--line-height-base);
   color: var(--color-text);
   background: var(--color-background);
@@ -218,6 +222,39 @@ a:hover {
 .show-more-btn:hover {
   background: var(--color-border);
   color: var(--color-text);
+}
+
+/* Home button (fixed, accessible) */
+.home-btn {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 9999;
+  display: inline-block;
+  background: rgba(255,255,255,0.9);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.home-btn:hover,
+.home-btn:focus {
+  background: var(--color-primary);
+  color: white;
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .home-btn {
+    left: 0.5rem;
+    top: 0.5rem;
+    padding: 0.35rem 0.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 .hidden {
