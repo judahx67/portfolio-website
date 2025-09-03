@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
   
   // Copy security files
   eleventyConfig.addPassthroughCopy({"src/.well-known": ".well-known"});
-  
+  eleventyConfig.addPassthroughCopy("googleea9674704c5c83f5.html");
   // Watch for changes in assets
   eleventyConfig.addWatchTarget("./src/assets/");
   
